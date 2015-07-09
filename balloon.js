@@ -1,8 +1,8 @@
 var counter = 0; 
 
-
-var setIntervalId = setInterval(function () 
- {createLetter()}, 3000); 
+//creat timer for game 
+//every few seconds a new letter will appear 
+var setIntervalId = setInterval(function () {createLetter()}, 2000); 
 
 //each time the function is called a random letter will appear 
 
@@ -21,7 +21,7 @@ function createLetter() {
   container = document.getElementById('container');
   container.appendChild(letterDiv);
 
-
+//key are eliminated when keys are the same. 
 $(document).keydown( function (event) { 
     var keycode = String.fromCharCode(event.keyCode);
     keycode = keycode.toLowerCase(); 
@@ -52,7 +52,7 @@ $(document).keydown( function (event) {
 //style 
 //counter
 //decrease counter
-// time limit
+// time limitr
 
 
 //create two players
