@@ -1,11 +1,10 @@
 var counter = 0; 
-
-//creat timer for game 
+var timer = 0; 
 //every few seconds a new letter will appear 
 var setIntervalId = setInterval(function () {createLetter()}, 2000); 
 
-//each time the function is called a random letter will appear 
 
+//each time the function is called a random letter will appear 
 var letterArray = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
 function createLetter() {  
@@ -37,9 +36,20 @@ $(document).keydown( function (event) {
       console.log(counter);
     }
   });
-}
-  
+    
+  function gameOver() { 
+    var message = document.getElementById('message');
+    message.innerHTML = "The time is " + Date(); 
+ }
+    var timer = setInterval(gameOver, 500); 
 
+  function stopGame() { 
+    clearInterval(timer);
+    clearInterval(setIntervalId); 
+  }
+
+    setTimeout(stopGame, 9000);
+}    
 
 
 
