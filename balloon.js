@@ -1,3 +1,6 @@
+var counter = 0; 
+
+
 var setIntervalId = setInterval(function () 
  {createLetter()}, 3000); 
 
@@ -18,17 +21,20 @@ function createLetter() {
   container = document.getElementById('container');
   container.appendChild(letterDiv);
 
-  
+
 $(document).keydown( function (event) { 
     var keycode = String.fromCharCode(event.keyCode);
     keycode = keycode.toLowerCase(); 
     console.log(keycode + " KEYCODE HERE");
     console.log(randomLetter);
     if(keycode === randomLetter){
-      $("#" + keycode).hide(); 
-    console.log("keys are the same");
+      counter++; 
+      console.log(counter);
+    $("#" + keycode).hide(); 
+      console.log("keys are the same");
     } else { 
-    console.log("keys are not the same");
+      console.log("keys are not the same");
+      console.log(counter);
     }
   });
 }
