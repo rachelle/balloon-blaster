@@ -31,29 +31,28 @@ function createLetter() {
 $(document).keydown( function (event) { 
     var keycode = String.fromCharCode(event.keyCode);
     keycode = keycode.toLowerCase(); 
-    console.log(keycode + " KEYCODE HERE");
-    console.log(randomLetter);
 //score is incremented with the counter variable 
     document.getElementById('counter'); 
     if(keycode === randomLetter){
       counter++;
       $("#counter").html("Player Score: " + counter);
-      console.log(counter);
-    $("#" + keycode).fadeOut("slow"); 
-      console.log("keys are the same");
-    } else {
-      console.log("keys are not the same");
-      console.log(counter);
-    }
+      $("#" + keycode).fadeOut("slow"); 
+      } else {
+
+      }
     });
     
  //Set a timer for the game 
-  function gameOver() { 
-
-    var message = document.getElementById('message');
-    message.innerHTML = "Timer: " + Date(); 
-   }
-    var timer = setInterval(gameOver); 
+var targetTime = new Date(); 
+targetTime = targetTime.setSeconds(targetTime.getSeconds() + 30); 
+var message = document.getElementById('message');
+ 
+ setInterval(function () {
+  var currentTime = new Date().getTime(); 
+  var secondsLeft = (targetTime - currentTime) / 1000; 
+  message.innerHTML = "Timer: " + Math.floor(secondsLeft); 
+}, 1000);  
+   
  //A function to stop the game
   function stopGame() { 
     clearInterval(timer);
@@ -63,6 +62,8 @@ $(document).keydown( function (event) {
     
 }    
 
+
+// var timer = gameOver(), 1000); 
 
 
 // resets the game
