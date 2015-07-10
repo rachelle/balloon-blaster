@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Open Sans", sans-serif;
+}
+
 body{ 
   width: 100%;
   height: 700px;
@@ -7,7 +11,7 @@ body{
 
 h1 {
   color: #FFE171;
-  font-style: Arial;
+  font-style: "Open-Sans";
   font-size: 60px;
   text-align: center;
 }
@@ -20,7 +24,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  margin-top: 80px;
+  margin-top: 40px;
   border: 5px solid;
   border-color: #6E77B0;
 }
@@ -33,7 +37,7 @@ h1 {
   color: red;
   font-size: 50px;
   padding-bottom: 290px;
-  font-style: Arial;
+  font-style: "Open-Sans";
   text-align:center;
   border-radius: 150px;
   background-image: url("kitty_power.jpg");
@@ -43,13 +47,16 @@ h1 {
 
 #message {
   color: white;
+  font-style: "Open-Sans";
 }
 
 #counter { 
   font-size: 30px;
   color: white;
+  font-style: "Open-Sans";
   width: 90px;
   display: inline;
   height: 50px;
 }
 
+@media only screen and (max-width: 400px){
