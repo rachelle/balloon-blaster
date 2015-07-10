@@ -4,9 +4,9 @@
 
 body{ 
   width: 100%;
-  height: 700px;
   margin: 0 auto;
   background-image: url("purple_haze.jpg");
+  position: absolute;
 }
 
 h1 {
@@ -14,6 +14,8 @@ h1 {
   font-style: "Open-Sans";
   font-size: 60px;
   text-align: center;
+  margin: 0;
+  padding-right: 90px;
 }
 
 #container { 
@@ -34,7 +36,7 @@ h1 {
   height: 10px;
   background-color: transparent;
   border: 5px solid;
-  color: red;
+  color: #FFE171;
   font-size: 50px;
   padding-bottom: 290px;
   font-style: "Open-Sans";
@@ -46,8 +48,9 @@ h1 {
 }
 
 #message {
-  color: white;
+  color: #FFE171;
   font-style: "Open-Sans";
+  float: right;
 }
 
 #counter { 
@@ -56,7 +59,28 @@ h1 {
   font-style: "Open-Sans";
   width: 90px;
   display: inline;
-  height: 50px;
+  height: 20px;
+ }
+
+#resetButton{
+  background-color:#028482;
+  color:white;
+  width:130px;
+  height:40px;
+  border-radius:9px;
+  font-size:14px;
+  font-weight:bold;
+  border: 2px solid black;
+  font-style:"Open-Sans";
+  cursor:pointer;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-right: 40px;
+  
+}
+
+#resetButton:hover{
+  background-color: lightgreen;
 }
 
 @media only screen and (max-width: 400px){

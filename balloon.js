@@ -1,3 +1,6 @@
+var kitty = document.getElementById(kitty);
+$(kitty).slideDown(); 
+
 var counter = 0; 
 var timer = 0; 
 //every few seconds a new letter will appear 
@@ -46,19 +49,29 @@ $(document).keydown( function (event) {
     
  //Set a timer for the game 
   function gameOver() { 
+
     var message = document.getElementById('message');
     message.innerHTML = "Timer: " + Date(); 
- }
+   }
     var timer = setInterval(gameOver); 
  //A function to stop the game
   function stopGame() { 
     clearInterval(timer);
     clearInterval(setIntervalId); 
-  }
-
+}
     setTimeout(stopGame, 30000);
+    
 }    
 
+
+
+// resets the game
+
+//function onLoad() {
+//document.getElementById("resetButton").addEventListener("click", function(){
+   // if()
+  //}
+//}
 
 
 
