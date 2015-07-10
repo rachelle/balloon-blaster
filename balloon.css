@@ -22,7 +22,7 @@ h1 {
   position: relative;
   margin-top: 80px;
   border: 5px solid;
-  border-color: white;
+  border-color: #6E77B0;
 }
 
 .letter {
@@ -43,5 +43,12 @@ h1 {
 
 #message {
   color: white;
+}
+
+#counter { 
+  font-size: 30px;
+  color: white;
+  width: 50px;
+  height: 50px;
 }
 

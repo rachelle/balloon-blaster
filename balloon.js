@@ -25,8 +25,10 @@ $(document).keydown( function (event) {
     keycode = keycode.toLowerCase(); 
     console.log(keycode + " KEYCODE HERE");
     console.log(randomLetter);
+    document.getElementById('counter'); 
     if(keycode === randomLetter){
       counter++; 
+      $("#counter").html("Player Score: " + counter);
       console.log(counter);
     $("#" + keycode).hide(); 
       console.log("keys are the same");
@@ -39,16 +41,16 @@ $(document).keydown( function (event) {
   //Set a timer for the game 
   function gameOver() { 
     var message = document.getElementById('message');
-    message.innerHTML = "Timer " + Date(); 
+    message.innerHTML = "Timer: " + Date(); 
  }
-    var timer = setInterval(gameOver, 1); 
+    var timer = setInterval(gameOver); 
 
   function stopGame() { 
     clearInterval(timer);
     clearInterval(setIntervalId); 
   }
 
-    setTimeout(stopGame, 10000);
+    setTimeout(stopGame, 30000);
 }    
 
 
