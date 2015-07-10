@@ -48,7 +48,8 @@ h1 {
 #counter { 
   font-size: 30px;
   color: white;
-  width: 50px;
+  width: 90px;
+  display: inline;
   height: 50px;
 }
 
